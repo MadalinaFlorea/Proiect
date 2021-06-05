@@ -1,0 +1,22 @@
+{
+  "name": "proiect",
+  "version": "1.0.0",
+  "description": "Proiect-Wantsome",
+  "main": "index.js",
+  "scripts": {
+    "test": "Standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadalinaFlorea/Proiect.git"
+  },
+  "keywords": [
+    "pet-shop"
+  ],
+  "author": "Madalina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MadalinaFlorea/Proiect/issues"
+  },
+  "homepage": "https://github.com/MadalinaFlorea/Proiect#readme"
+}

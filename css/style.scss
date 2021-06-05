@@ -1,0 +1,310 @@
+@import "colors";
+body {
+  margin: 0;
+  padding-top: 50px;
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  header {
+    background-color: $primary-color;
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    span {
+      color: $tertiary-color;
+      margin-right: 20px;
+      justify-self: flex-end;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      .subsection {
+        display: flex;
+        width: 50%;
+      }
+      .right {
+        justify-content: flex-end;
+      }
+    }
+  }
+  nav {
+    background-color: $secondary-color;
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-around;
+      color: $primary-color;
+      height: 40px;
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+  .hero {
+    background-image: url("../images/header.png");
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    height: 50vh;
+    color: #f4faff;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    form {
+      input[type="text"] {
+        width: 15vw;
+      }
+      label {
+        display: block;
+        text-align: center;
+        padding-bottom: 15px;
+      }
+      input[type="submit"] {
+        background-color: $contrast-color;
+        color: $tertiary-color;
+        border: 1px solid $secondary-color;
+      }
+    }
+  }
+  section.carousel {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+    h3 {
+      margin-top: 40px;
+      text-transform: uppercase;
+      color: $primary-color;
+      font-weight: 300;
+    }
+    h4 {
+      color: $primary-color;
+      font-weight: 300;
+      margin-top: 0;
+    }
+    .product-slider {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      .product img {
+        height: 150px;
+      }
+      .product {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        border: 1px solid $secondary-color;
+        padding: 10px;
+      }
+      button {
+        background-color: $contrast-color;
+        color: $tertiary-color;
+        border: 1px solid $secondary-color;
+      }
+      .arrow {
+        position: absolute;
+        color: $secondary-color;
+        font-size: 25px;
+        z-index: 1;
+      }
+      .arrow-right {
+        right: 20px;
+        bottom: 120px;
+      }
+      .arrow-left {
+        left: 20px;
+        bottom: 130px;
+      }
+      small {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .hero2 {
+    background-image: url("../images/product5.png");
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    height: 25vh;
+    margin-top: 50px;
+    color: $tertiary-color;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    h2,
+    small {
+      font-weight: bold;
+      color: $secondary-color;
+    }
+    button {
+      background-color: $contrast-color;
+      color: $secondary-color;
+      margin-top: 5px;
+      border: 1px solid $secondary-color;
+    }
+  }
+}
+.container {
+  margin: 0 auto;
+  width: 85vw;
+}
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+section.subscribe {
+  background-color: $primary-color;
+  height: 70px;
+  font-weight: lighter;
+  color: $tertiary-color;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  input[type="text"] {
+    width: 200px;
+  }
+  input[type="submit"] {
+    background-color: $contrast-color;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+  }
+}
+footer {
+  background-color: $secondary-color;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $contrast-color;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      color: $primary-color;
+    }
+  }
+}
+.pop-up {
+  width: 40vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  .left {
+    background-image: url("../images/login-left.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 2000px rgba(83, 86, 87, 0.9);
+    margin-top: 10px;
+    h1,
+    p {
+      color: $secondary-color;
+    }
+    button {
+      background-color: $contrast-color;
+      border: 1px solid $tertiary-color;
+      color: $tertiary-color;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  .right {
+    background-color: $secondary-color;
+    label,
+    input {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 5px 0;
+      margin: 7px 0;
+    }
+    .wrapper {
+      position: relative;
+    }
+    #show-password {
+      position: absolute;
+      bottom: 5px;
+      right: 3px;
+      color: $primary-color;
+    }
+    input[type="submit"] {
+      background-color: $contrast-color;
+      border: 3px solid $secondary-color;
+      color: $tertiary-color;
+    }
+    a {
+      color: $contrast-color;
+    }
+  }
+  section {
+    padding: 8%;
+    box-sizing: border-box;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+// .overlay {
+// filter:blur(5px);
+// overflow-y: hidden;
+// }
+.search-bar {
+  background-color: $tertiary-color;
+  height: 60px;
+  .container {
+    height:100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  input[type=text]{
+    width:40vh;
+  }
+  input[type=submit]{
+    background-color:$contrast-color ;
+    color:$white;
+    border:1px solid $white;
+  }
+}

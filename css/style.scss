@@ -308,3 +308,17 @@ footer {
     border:1px solid $white;
   }
 }
+#filter{
+  width:30%;
+}
+#products_list{
+  width:70%;
+}
+#products{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  li{
+    width:50%;
+  }
+}

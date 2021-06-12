@@ -465,4 +465,27 @@ footer .container ul {
   color: #ffffff;
   border: 1px solid #ffffff;
 }
+
+#filter {
+  width: 30%;
+}
+
+#products_list {
+  width: 70%;
+}
+
+#products {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#products li {
+  width: 50%;
+}
 /*# sourceMappingURL=style.css.map */

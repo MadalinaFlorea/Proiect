@@ -142,12 +142,15 @@ body {
         height: 150px;
       }
       .product {
-        display: flex;
+        display: none;
         flex-direction: column;
         align-content: center;
         align-items: center;
         border: 1px solid $secondary-color;
         padding: 10px;
+        &.active {
+          display: flex;
+        }
       }
       button {
         background-color: $contrast-color;
@@ -159,6 +162,7 @@ body {
         color: $secondary-color;
         font-size: 25px;
         z-index: 1;
+        cursor: pointer;
       }
       .arrow-right {
         right: 20px;
@@ -257,8 +261,8 @@ footer {
   backdrop-filter: blur(10px);
 }
 .modal-body {
-  width: 40vw;
-  height: 45vh;
+  width: 45vw;
+  height: 60vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -267,7 +271,7 @@ footer {
   position: absolute;
   left: 0;
   right: 0;
-  top: 30vh;
+  top: 20vh;
   margin-left: auto;
   margin-right: auto;
   .left {
@@ -275,7 +279,7 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: inset 0 0 0 2000px rgba(83, 86, 87, 0.9);
+    box-shadow: inset 0 0 0 2000px rgba(83, 86, 87, 0.8);
     h1,
     p {
       color: $secondary-color;
@@ -298,6 +302,9 @@ footer {
       padding: 5px 0;
       margin: 7px 0;
     }
+    label{
+      padding-bottom: 0px;
+    }
     .wrapper {
       position: relative;
     }
@@ -315,6 +322,7 @@ footer {
     a {
       color: $contrast-color;
     }
+    #password-validation-message,
     #email-validation-message {
       font-size: 13px;
       margin: 0;
@@ -343,10 +351,6 @@ footer {
     justify-content: center;
   }
 }
-// .overlay {
-// filter:blur(5px);
-// overflow-y: hidden;
-// }
 .search-bar {
   background-color: $tertiary-color;
   height: 60px;

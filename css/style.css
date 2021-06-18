@@ -21,6 +21,7 @@ body header span {
   color: #f4faff;
   margin-right: 20px;
   justify-self: flex-end;
+  cursor: pointer;
 }
 
 body header .container {
@@ -71,11 +72,50 @@ body nav ul {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: #535657;
   height: 40px;
   padding: 0;
   margin: 0;
   font-weight: bold;
+}
+
+body nav ul li {
+  position: relative;
+}
+
+body nav ul li a {
+  color: #535657;
+  text-decoration: none;
+}
+
+body nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #DEE7E7;
+  min-width: 160px;
+  padding: 12px 0;
+  height: auto;
+  z-index: 1;
+}
+
+body nav ul li ul li {
+  padding: 5px   16px;
+  font-weight: normal;
+}
+
+body nav ul li ul li:hover a {
+  color: #000000;
+}
+
+body nav ul li ul li:first-letter {
+  text-transform: uppercase;
+}
+
+body nav ul li:hover > a {
+  color: #000000;
+}
+
+body nav ul li:hover ul {
+  display: block;
 }
 
 body .hero {
@@ -329,9 +369,21 @@ footer .container ul {
   color: #535657;
 }
 
-.pop-up {
+.modal {
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.modal-body {
   width: 40vw;
-  height: 40vh;
+  height: 45vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,22 +407,21 @@ footer .container ul {
   margin-right: auto;
 }
 
-.pop-up .left {
+.modal-body .left {
   background-image: url("../images/login-left.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-box-shadow: inset 0 0 0 2000px rgba(83, 86, 87, 0.9);
           box-shadow: inset 0 0 0 2000px rgba(83, 86, 87, 0.9);
-  margin-top: 10px;
 }
 
-.pop-up .left h1,
-.pop-up .left p {
+.modal-body .left h1,
+.modal-body .left p {
   color: #DEE7E7;
 }
 
-.pop-up .left button {
+.modal-body .left button {
   background-color: #4F646F;
   border: 1px solid #f4faff;
   color: #f4faff;
@@ -378,12 +429,12 @@ footer .container ul {
   margin: 0 auto;
 }
 
-.pop-up .right {
+.modal-body .right {
   background-color: #DEE7E7;
 }
 
-.pop-up .right label,
-.pop-up .right input {
+.modal-body .right label,
+.modal-body .right input {
   display: block;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -392,28 +443,49 @@ footer .container ul {
   margin: 7px 0;
 }
 
-.pop-up .right .wrapper {
+.modal-body .right .wrapper {
   position: relative;
 }
 
-.pop-up .right #show-password {
+.modal-body .right #show-password {
   position: absolute;
   bottom: 5px;
   right: 3px;
   color: #535657;
 }
 
-.pop-up .right input[type="submit"] {
+.modal-body .right input[type="submit"] {
   background-color: #4F646F;
   border: 3px solid #DEE7E7;
   color: #f4faff;
 }
 
-.pop-up .right a {
+.modal-body .right a {
   color: #4F646F;
 }
 
-.pop-up section {
+.modal-body .right #email-validation-message {
+  font-size: 13px;
+  margin: 0;
+}
+
+.modal-body .right #email-validation-message.invalid {
+  color: red;
+}
+
+.modal-body .right #email-validation-message.valid {
+  color: green;
+}
+
+.modal-body .right h1 {
+  margin: 12px 0;
+}
+
+.modal-body .right #show-password {
+  cursor: pointer;
+}
+
+.modal-body section {
   padding: 8%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

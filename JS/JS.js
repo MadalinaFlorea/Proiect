@@ -1,5 +1,5 @@
 const modals = document.createElement("div");
-modals.innerHTML = `<div class="pop-up" style="display: none">
+modals.innerHTML = `<div class="modal" style="display: none"><div class="modal-body">
 <section class="left">
   <h1>Paws Pet Shop</h1>
   <p>Cumparaturi simple pentru labute fericite!</p>
@@ -13,6 +13,7 @@ modals.innerHTML = `<div class="pop-up" style="display: none">
   <form>
     <label for="email">Adresa de e-mail</label>
     <input type="text" id="email" placeholder="Introduceti e-mail" />
+    <p id="email-validation-message"></p>
     <div class="wrapper">
       <label for="password">Parola</label>
       <input
@@ -28,13 +29,14 @@ modals.innerHTML = `<div class="pop-up" style="display: none">
     >Nu ai cont? Nu-ti face griji! Poti crea unul aici!</a
   >
 </section>
+</div>
 </div>`;
 document.body.appendChild(modals);
-var modal = document.getElementsByClassName("pop-up")[0];
+var modal = document.getElementsByClassName("modal")[0];
 var button = document.getElementById("login");
 var loginButton = document.getElementById("submit-modal");
 button.onclick = function () {
-  modal.style.display = "flex";
+  modal.style.display = "block";
 };
 loginButton.onclick = function () {
   modal.style.display = "none";
@@ -494,18 +496,97 @@ const productsList=[
         subcategory: "custi"
     }  
 ];
-let productsWrapper = document.getElementById("products_list");
-for( let product of productsList) {
-    let productWrapper = document.createElement("div");
-    productWrapper.classList.add("product");
-    let productImage = document.createElement("img");
-    productImage.setAttribute("src",product.image);
-    let productTitle = document.createElement("p");
-    productTitle.innerHTML = product.name;
-    let productPrice = document.createElement("span");
-    productPrice.innerHTML = product.price;
-    productWrapper.appendChild(productImage);
-    productWrapper.appendChild(productTitle);
-    productWrapper.appendChild(productPrice);
-    productsWrapper.appendChild(productWrapper);
+
+let dropdownList = [];
+const addSubcategoryToDropdown = (subcategory, dropdown) => {
+    if (dropdown.subcategories.filter((elem => elem === subcategory)).length === 0) {
+        dropdown.subcategories.push(subcategory);
+    }
+};
+const getCategoryFromDropdownList = category => {
+    let existingDropdownCategory = dropdownList.filter(dropdown => dropdown.category === category)
+    if (existingDropdownCategory.length === 0) {
+        let dropdown = {
+            category: category,
+            subcategories: []
+        }
+        dropdownList.push(dropdown);
+        return dropdown;
+    } else {
+        return existingDropdownCategory[0];
+    }
 }
+for (let product of productsList) {
+    if (typeof product.category !== "string") {
+        for (category of product.category) {
+            addSubcategoryToDropdown(product.subcategory, getCategoryFromDropdownList(category))
+        }
+    } else {
+        addSubcategoryToDropdown(product.subcategory, getCategoryFromDropdownList(product.category));
+    }
+}
+console.log(dropdownList);
+
+const menu = document.createElement("ul")
+for (let dropdown of dropdownList) {
+    let dropdownItem = document.createElement("li");
+    let categoryLink = document.createElement("a");
+    categoryLink.innerHTML = dropdown.category;
+    categoryLink.setAttribute("href", `products-overview.html?category=${dropdown.category}`);
+    dropdownItem.appendChild(categoryLink);
+    let dropdownWrapper = document.createElement("ul");
+    for (let subcategory of dropdown.subcategories) {
+        let subcategoryItem = document.createElement("li");
+        let subcategoryLink = document.createElement("a");
+        subcategoryLink.innerHTML = subcategory;
+        subcategoryLink.setAttribute("href", `products-overview.html?category=${dropdown.category}&subcategory=${subcategory}`);
+        subcategoryItem.appendChild(subcategoryLink);
+        dropdownWrapper.appendChild(subcategoryItem);
+    }
+    dropdownItem.appendChild(dropdownWrapper);
+    menu.appendChild(dropdownItem);
+}
+document.querySelector("nav .container").appendChild(menu);
+
+let productsWrapper = document.getElementById("products_list");
+if (productsWrapper) {
+    for (let product of productsList) {
+        let productWrapper = document.createElement("div");
+        productWrapper.classList.add("product");
+        let productImage = document.createElement("img");
+        productImage.setAttribute("src",product.image);
+        let productTitle = document.createElement("p");
+        productTitle.innerHTML = product.name;
+        let productPrice = document.createElement("span");
+        productPrice.innerHTML = product.price;
+        productWrapper.appendChild(productImage);
+        productWrapper.appendChild(productTitle);
+        productWrapper.appendChild(productPrice);
+        productsWrapper.appendChild(productWrapper);
+    }
+}
+var emailValidatorRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+document.getElementById("email").addEventListener('blur', (event) => {
+    const userInput = event.target.value;
+    const loginMessage = document.getElementById("email-validation-message");
+    loginMessage.setAttribute('class', '');
+    if (emailValidatorRegex.test(userInput)) {
+        loginMessage.innerHTML = "<i class=\"fas fa-check\"></i> Adresa introdusa este valida";
+        loginMessage.classList.add("valid");
+    }
+    else {
+        loginMessage.innerHTML = "<i class=\"fas fa-times\"></i> Adresa introdusa nu este valida";
+        loginMessage.classList.add("invalid");
+    }
+});
+document.getElementById("show-password").addEventListener("click",(e) => {
+   const passwordInput = document.getElementById("password");
+   if (passwordInput.getAttribute("type") === "password") {
+       passwordInput.setAttribute("type", "text");
+   }
+   else {
+       passwordInput.setAttribute("type", "password");
+   }
+   
+})

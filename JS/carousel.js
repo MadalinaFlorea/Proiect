@@ -12,9 +12,13 @@ const buildCarousel = (products, carouselTitle, carouselSubtitle) => {
     }
     let productsContainer = document.createElement("div");
     productsContainer.classList.add("product-slider");
-    for (let product of products) {
+    let activeProductsCounter = 0;
+    const buildProduct = (product) => {
         let productWrapper = document.createElement("div");
         productWrapper.classList.add("product");
+        if (product.active) {
+            productWrapper.classList.add("active");
+        }
         let productImage = document.createElement("img");
         productImage.setAttribute("src", product.image);
         productWrapper.appendChild(productImage);
@@ -28,7 +32,17 @@ const buildCarousel = (products, carouselTitle, carouselSubtitle) => {
         //@toDo deharcodare
         productButton.innerHTML = "Vezi produs";
         productWrapper.appendChild(productButton);
-        productsContainer.appendChild(productWrapper);
+        return productWrapper;
+    }
+
+    for (let product of products) {
+        if (activeProductsCounter < 4) {
+            product.active = true;
+            activeProductsCounter++;
+        } else {
+            product.active = false;
+        }
+        productsContainer.appendChild(buildProduct(product));
     }
     let arrowRight = document.createElement("i");
     ["fas", "fa-arrow-right", "arrow", "arrow-right"].forEach(el => arrowRight.classList.add(el));
@@ -37,34 +51,31 @@ const buildCarousel = (products, carouselTitle, carouselSubtitle) => {
     ["fas", "fa-arrow-left", "arrow", "arrow-left"].forEach(el => arrowLeft.classList.add(el));
     productsContainer.appendChild(arrowLeft);
     section.appendChild(productsContainer);
-    return section;
-}
 
-let heroElement = document.querySelector("main section.hero2");
-heroElement.before(buildCarousel(
-    productsList.filter(product => product.subcategory === "mancare umeda"),
-    "Profita de reducerea de 25%",
-    "Oferta valabila pana la finalul lunii august"
-));
-heroElement.after(buildCarousel(
-    productsList.filter(product => product.subcategory === "jucarii"),
-    "Fa-ti animalul fericit cu jucariile lui preferate"
-));
-
-document.querySelectorAll("main section.carousel").forEach(el => {
-    let products = el.querySelectorAll(".product");
-    for (let i = 0; i < 4; i++) {
-        products[i].classList.add("active");
-    }
-    el.querySelector(".arrow-right").addEventListener('click',  event => {
-        // remove active class from first element, add class to the first product that doesn't have active.
-        event.target.parentElement.querySelector(".active").classList.remove("active");
-        event.target.parentElement.querySelectorAll(".product:not(.active)").filter(element => {
-            if (element.previousElementSibling.classList.contains("active")) {
-                return false;
-            }
-            return true;
-        })[0].classList.add("active");
+    section.querySelector(".arrow-right").addEventListener('click',  event => {
+        const firstInactiveProduct = products.find(product => !product.active);
+        firstInactiveProduct.active = true;
+        const firstActiveproduct = products.shift();
+        firstActiveproduct.active = false;
+        products.push(firstActiveproduct);
+        renderElements(products);
+    });
+    section.querySelector(".arrow-left").addEventListener("click", event => {
+        let lastElement = products.pop();
+        lastElement.active = true;
+        let lastActiveElement = products.filter(p => p.active).pop();
+        lastActiveElement.active = false;
+        products.unshift(lastElement);
+        renderElements(products);
     });
 
-});
+    const renderElements = (products) => {
+        section.querySelectorAll(".product").forEach(element => element.remove());
+        let productWrapper = section.querySelector(".product-slider");
+        for(let product of products) {
+            productWrapper.appendChild(buildProduct(product));
+        }
+    }
+    
+    return section;
+}

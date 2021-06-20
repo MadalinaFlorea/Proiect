@@ -2,11 +2,11 @@
 body {
   margin: 0;
   padding-top: 50px;
+  font-family: sans-serif;
   .logo {
     width: 50px;
     height: 50px;
   }
-
   header {
     background-color: $primary-color;
     width: 100vw;
@@ -14,13 +14,12 @@ body {
     position: fixed;
     top: 0;
     z-index: 10;
-    span {
+    div {
       color: $tertiary-color;
       margin-right: 20px;
       justify-self: flex-end;
       cursor: pointer;
     }
-
     .container {
       display: flex;
       flex-direction: row;
@@ -57,30 +56,30 @@ body {
         ul {
           display: none;
           position: absolute;
-          background-color :$secondary-color;
+          background-color: $secondary-color;
           min-width: 160px;
           padding: 12px 0;
           height: auto;
           z-index: 1;
           li {
-            padding: 5px   16px;
+            padding: 5px 16px;
             font-weight: normal;
             &:hover a {
               color: $black;
-            } 
-            &:first-letter{
+            }
+            &:first-letter {
               text-transform: uppercase;
             }
           }
         }
         &:hover {
-          &>a {
-            color:$black;
+          & > a {
+            color: $black;
           }
           ul {
             display: block;
           }
-        } 
+        }
       }
     }
   }
@@ -159,17 +158,17 @@ body {
       }
       .arrow {
         position: absolute;
-        color: $secondary-color;
+        color: $primary-color;
         font-size: 25px;
         z-index: 1;
         cursor: pointer;
       }
       .arrow-right {
-        right: 20px;
+        right: 10px;
         bottom: 120px;
       }
       .arrow-left {
-        left: 20px;
+        left: 10px;
         bottom: 130px;
       }
       small {
@@ -217,7 +216,6 @@ input[type="submit"] {
 }
 section.subscribe {
   background-color: $primary-color;
-  height: 70px;
   font-weight: lighter;
   color: $tertiary-color;
   .container {
@@ -225,6 +223,9 @@ section.subscribe {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    h2 {
+      font-size: 22px;
+    }
   }
   input[type="text"] {
     width: 200px;
@@ -251,12 +252,12 @@ footer {
   }
 }
 .modal {
-  position: fixed; 
-  z-index: 100; 
+  position: fixed;
+  z-index: 100;
   padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   backdrop-filter: blur(10px);
 }
@@ -302,7 +303,7 @@ footer {
       padding: 5px 0;
       margin: 7px 0;
     }
-    label{
+    label {
       padding-bottom: 0px;
     }
     .wrapper {
@@ -322,21 +323,22 @@ footer {
     a {
       color: $contrast-color;
     }
+    #login-message,
     #password-validation-message,
     #email-validation-message {
       font-size: 13px;
       margin: 0;
-      &.invalid{
+      &.invalid {
         color: $error-message;
       }
-      &.valid{
+      &.valid {
         color: $valid-message;
       }
     }
-    h1{
+    h1 {
       margin: 12px 0;
     }
-    #show-password{
+    #show-password {
       cursor: pointer;
     }
   }
@@ -355,33 +357,134 @@ footer {
   background-color: $tertiary-color;
   height: 60px;
   .container {
-    height:100%;
+    height: 100%;
     display: flex;
     align-content: center;
     align-items: center;
     justify-content: center;
     flex-direction: row;
   }
-  input[type=text]{
-    width:40vh;
+  input[type="text"] {
+    width: 40vh;
   }
-  input[type=submit]{
-    background-color:$contrast-color ;
-    color:$white;
-    border:1px solid $white;
+  input[type="submit"] {
+    background-color: $contrast-color;
+    color: $white;
+    border: 1px solid $white;
   }
 }
-#filter{
-  width:30%;
+.product-page.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
 }
-#products_list{
-  width:70%;
+#filter {
+  width: 20%;
+  height: 80%;
+  background-color: $tertiary-color;
+  border: 1px solid $secondary-color;
+  margin: 20px 0;
+  padding: 0 25px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 60px;
+  h4 {
+    color: $primary-color;
+  }
+  p {
+    color: $contrast-color;
+    margin: 0;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5px;
+  }
+  li {
+    color: $primary-color;
+    margin-top: 5px;
+  }
 }
-#products{
+#products_list {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: normal;
+  margin-top: 13px;
+  select {
+    margin: 0.5%
+  }
+  .after-select {
+    flex-basis: 100%;
+  }
+  p {
+    width: 100%;
+    text-align: center;
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $secondary-color;
+    margin: 0.5%;
+    width: 24%;
+    box-sizing: border-box;
+    position: relative;
+    background-color: $tertiary-color;
+    &:hover {
+      box-shadow: 0 0 8px $secondary-color;
+      a {
+        position: absolute;
+        top: 35%;
+        display: inline-block;
+        padding: 0.5em 3em;
+        border: 0.16em solid $white;
+        margin: 0 0.3em 0.3em 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+        text-align: center;
+        background-color: $contrast-color;
+        z-index: 10;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      img {
+        opacity: 0.3;
+      }
+    }
+    a {
+      display: none;
+    }
+    img {
+      width: 100%;
+      object-fit: contain;
+      z-index: 9;
+    }
+    p {
+      text-align: center;
+      color: $contrast-color;
+      padding: 0 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    span {
+      align-self: start;
+      font-weight: bold;
+      margin: 10px;
+    }
+  }
+}
+#products {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  li{
-    width:50%;
+  flex-wrap: wrap;
+  li {
+    width: 50%;
   }
 }

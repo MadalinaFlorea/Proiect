@@ -18,6 +18,7 @@ const signInHtml = `
       <i class="fas fa-eye" id="show-password"></i>
     </div>
     <input type="submit" id="submit-login" value="Conecteaza-te" />
+    <p id="login-message"></p>
   </form>
   <a href="#" onclick="switchModal()">Nu ai cont? Poti crea unul aici!</a>
 `;
@@ -47,6 +48,7 @@ const signUpHtml = `
   </div>
   <p id="password-validation-message"></p>
   <input type="submit" id="submit-signup" value="Creeaza cont" />
+  <p id="login-message"></p>
 </form>
 <a href="#" onclick="switchModal()">Ai deja un cont? Conecteaza-te aici!</a>
 `;
@@ -58,83 +60,101 @@ modals.innerHTML = `
   <p>Cumparaturi simple pentru labute fericite!</p>
   <button>Devino partener Paws</button>
 </section>
-<section class="right">
-  ${signInHtml}
-</section>
+<section class="right"></section>
 </div>
 </div>
 `;
 
 document.body.appendChild(modals);
-var modal = document.getElementsByClassName("modal")[0];
-var button = document.getElementById("login");
-var loginButton = document.getElementById("submit-login");
-button.onclick = function () {
-  modal.style.display = "block";
-};
-loginButton.onclick = function () {
-  //@todo actually log in people.
-  modal.style.display = "none";
-};
-window.onclick = function (event) {
-  if (event.target == modal) {
+let button = document.getElementById("login");
+let modal = document.getElementsByClassName("modal")[0];
+
+if (button !== null) {
+  button.onclick = () => modal.style.display = "block";
+}
+
+window.onclick = e => {
+  if (e.target == modal) {
     modal.style.display = "none";
   }
 };
 
 //Validation
-const emailValidatorRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const emailValidationEvent = (event) => {
+const emailValidationEvent = event => {
   const userInput = event.target.value;
   const loginMessage = document.getElementById("email-validation-message");
-  loginMessage.setAttribute('class', '');
+  loginMessage.setAttribute("class", "");
   if (emailValidatorRegex.test(userInput)) {
-    loginMessage.innerHTML = "<i class=\"fas fa-check\"></i> Adresa introdusa este valida";
+    loginMessage.innerHTML = '<i class="fas fa-check"></i> Adresa introdusa este valida';
     loginMessage.classList.add("valid");
-  }
-  else {
-    loginMessage.innerHTML = "<i class=\"fas fa-times\"></i> Adresa introdusa nu este valida";
+  } else {
+    loginMessage.innerHTML = '<i class="fas fa-times"></i> Adresa introdusa nu este valida';
     loginMessage.classList.add("invalid");
   }
 };
-document.getElementById("email").addEventListener('blur', emailValidationEvent);
 
-const passwordValidatorRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
-const passwordValidatorEvent = (event) => {
+const passwordValidatorEvent = event => {
   const userInput = event.target.value;
   const passwordMessage = document.getElementById("password-validation-message");
-  passwordMessage.setAttribute('class','');
+  passwordMessage.setAttribute("class", "");
   if (passwordValidatorRegex.test(userInput)) {
-    passwordMessage.innerHTML = "<i class=\"fas fa-check\"></i> Parola introdusa este valida";
+    passwordMessage.innerHTML = '<i class="fas fa-check"></i> Parola introdusa este valida';
     passwordMessage.classList.add("valid");
-  }
-  else {
-    passwordMessage.innerHTML = "<i class=\"fas fa-times\"></i> Parola introdusa nu este valida! Folositi un caracter special, o cifra, o majuscula si minim 8 caractere";
+  } else {
+    passwordMessage.innerHTML = '<i class="fas fa-times"></i> Parola introdusa nu este valida! Folositi un caracter special, o cifra, o majuscula si minim 8 caractere';
     passwordMessage.classList.add("invalid");
   }
 };
-  
 
-const showPasswordEvent = (e) => {
+const showPasswordEvent = () => {
   const passwordInput = document.getElementById("password");
   if (passwordInput.getAttribute("type") === "password") {
     passwordInput.setAttribute("type", "text");
-  }
-  else {
+  } else {
     passwordInput.setAttribute("type", "password");
   }
 };
-document.getElementById("show-password").addEventListener("click", showPasswordEvent);
-
 
 function switchModal() {
-  let currentModal = document.querySelector('.modal section.right h1');
-  if (currentModal.innerHTML === 'Login') {
-    currentModal.parentNode.innerHTML = signUpHtml;
-    document.getElementById("password").addEventListener('blur', passwordValidatorEvent);
+  let currentModal = document.querySelector(".modal section.right");
+  if (currentModal.innerHTML === "" || currentModal.querySelector("h1").innerHTML === "Sign-up") {
+    currentModal.innerHTML = signInHtml;
+    let loginButton = document.getElementById("submit-login");
+    loginButton.onclick = (event) => {
+      event.preventDefault();
+      const login = processLogin(event);
+      const message = document.getElementById("login-message");
+      message.setAttribute("class", "");
+      if (typeof login === "string") {
+        message.innerHTML = '<i class="fas fa-times"></i> ' + login;
+        message.classList.add("invalid");
+      } else {
+        message.innerHTML =  '<i class="fas fa-check"></i> Bun venit, ' + login.first_name + " " + login.last_name;
+        message.classList.add("valid")
+        setTimeout(() => modal.style.display = "none", 2000);
+      }
+    };
   } else {
-    currentModal.parentNode.innerHTML = signInHtml;
+    currentModal.innerHTML = signUpHtml;
+    let signUpButton = document.getElementById("submit-signup");
+    document.getElementById("password").addEventListener("blur", passwordValidatorEvent);
+    signUpButton.onclick = (event) => {
+      event.preventDefault();
+      const signup = processSignUp(event);
+      const message = document.getElementById("login-message");
+      message.setAttribute("class", "");
+      if (typeof signup === "string") {
+        message.innerHTML = '<i class="fas fa-times"></i> ' + signup;
+        message.classList.add("invalid");
+      } else {
+        message.innerHTML =  '<i class="fas fa-check"></i> Bun venit, ' + signup.first_name + " " + signup.last_name;
+        message.classList.add("valid")
+        setTimeout(() => modal.style.display = "none", 2000);
+      }
+    }; 
   }
-  document.getElementById("email").addEventListener('blur', emailValidationEvent);
+  document.getElementById("email").addEventListener("blur", emailValidationEvent);
   document.getElementById("show-password").addEventListener("click", showPasswordEvent);
 }
+
+switchModal();

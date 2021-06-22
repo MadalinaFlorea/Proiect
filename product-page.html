@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body class="overlay">
+    <header>
+      <div class="container">
+        <div class="subsection">
+            <a href="index.html"><img src="images/logo.png" class="logo" /></a>
+        </div>
+        <div class="subsection right">
+          <div> <i class="fas fa-shopping-cart"></i><span> Cosul tau</span></div>
+          <div id="profile"> <i class="fas fa-user"></i><span> Profil</span></div>
+          <div id="login"> <i class="fas fa-sign-in-alt"></i><span> Login</span></div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div class="container">
+      </div>
+    </nav>
+    <div class="search-bar">
+    <div class="container" >
+      <form>
+        <label for="search_bar"></label>
+        <input type="text" id="search_bar" placeholder="Cauta produse" />
+        <input type="submit" value="Search" />
+      </form>
+    </div>
+</div>
+<div class="product-container container">
+    <section id="product-description">
+        <div class="images">
+            <div class="image-expanded"></div>
+            <div class="images-small"></div>
+        </div>
+        <div id="details"></div>
+        <div id="specifications"></div>
+    </section>
+    <section id="product-details">
+        <h1>Title</h1>
+        <p>10000 Lei</p>
+        <button class="add-to-cart">adauga in cos</button>
+        <a href="#details">Detalii</a>
+        <a href="#specifications">Specificatii</a>
+    </section>
+</div>
+<section id="related-products"></section>
+<section class="subscribe">
+    <div class="container">
+      <h2>Aboneaza-te acum si primesti 10% reducere la prima comanda!</h2>
+      <form>
+        <input type="text" placeholder="Introduceti adresa de e-mail" />
+        <input type="submit" value="Abonare" />
+      </form>
+    </div>
+  </section>
+<footer>
+    <div class="container">
+      <div>
+        <h5>Despre</h5>
+        <ul>
+          <li>Echipa</li>
+          <li>Joburi</li>
+          <li>Blog</li>
+          <li>Presa</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Ajutor</h5>
+        <ul>
+          <li>FAQ</li>
+          <li>Securitate</li>
+          <li>Termeni si conditii</li>
+          <li>Politica de confidentialitate</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Conectare</h5>
+        <ul>
+          <li>Facebook</li>
+          <li>YouTube</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+<script src="JS/JS.js"></script>
+<script src="JS/modals.js"></script>
+<script src="JS/carousel.js"></script>
+<script src="JS/product-page.js"></script>
+  </body>
+</html>

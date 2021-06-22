@@ -2,173 +2,596 @@ const productsList = [
   {
     name: "Hrana uscata pentru caini Pedigree Adult, Vita & Pasare",
     price: 95.99,
-    image:
+    image:[
       "https://s13emagst.akamaized.net/products/415/414806/images/res_8a61518ca9dac47c74d45932fa4aea9b.jpg?width=450&height=450&hash=11A49FD90A755A9C30E5340520E8CCFD",
+      "https://s13emagst.akamaized.net/products/415/414806/images/res_5ae0f8865966d44b60dcbd851eb656c2.jpg?width=450&height=450&hash=69D0CE32D9B46BFEC01EB9E2040F6ADA",
+      "https://s13emagst.akamaized.net/products/415/414802/images/res_b05125fc055c3a5e378d5e381e4fb0f9.jpg?width=450&height=450&hash=E347C7EE1082634645EF20C5441687EF",
+      "https://s13emagst.akamaized.net/products/415/414794/images/res_ccbabf04cc99062d82cc6e742206d90d.jpg?width=450&height=450&hash=729233096815A99255AE95226CAF6CAC",
+    ],
     category: "Caini",
     subcategory: "mancare uscata",
-    id: 1
+    id: 1,
+    description: `Hrana uscata pentru caini Pedigree Adult, Vita & Pasare, 15 Kg
+
+    Noi, cei de la Pedigree®, credem ca fiecare caine merita un camin iubitor si o nutritie de calitate. Cu peste 40 de ani de experienta in dezvoltarea retetelor Pedigree®, consideram ca orice caine are 4 nevoi universale: Piele & blana, Sistem natural de protectie, Digestie si Igiena orala. De aceea hrana uscata Pedigree® Vital Protection™ este dezvoltata pentru a oferi o nutritie care adreseaza aceste patru nevoi, pentru a ajuta la mentinerea unui sistem natural de protectie puternic, a unei pieli si blani sanatoase, a unei digestii bune si pentru a ajuta la curatarea danturii cainelui. Pedigree® Vital Protection™ va ajuta sa va mentineti cainele sanatos si plin de vitalitate.
+
+    Igiena orala
+    Fiecare caine merita un botic fericit. Cainii se ajuta foarte mult de bot, zi de zi, de aceea este important ca gingiile si dintii lor sa fie mentinuti sanatosi. Textura speciala a produselor noastre ajuta in mentinerea igienei danturii.
+
+    Digestie
+    Fiecare caine merita o burtica sanatoasa. Produsele noastre contin fibre naturale si proteine de inalta calitate care contribuie la o digestie sanatoasa.
+
+    Piele & blana
+    Fiecare caine merita sa arate si sa se simta sanatos. Retetele noastre contin zinc si ulei de floarea soarelui, surse naturale de omega 6 care ajuta la hranirea pielii si blanii cainelui dumneavoastra.
+
+    Sistem natural de protectie
+    Fiecare caine merita un sistem natural de protectie puternic. Reteta noastra contine Vitamina E si minerale, elemente cheie in sustinerea unui sistem natural de protectie puternic.
+    Cea mai buna metoda de a avea grija de cainele dumneavoastra este sa ii oferiti acestuia o rutina de igiena orala eficienta. Pedigree® Vital Protection™ hrana uscata pentru caini combinat cu Pedigree® Daily DentaStix® pot contribui la asta. DentaStix® este o recompensa delicioasa cu o forma unica de X care, atunci cand este oferita zilnic, este demonstrat din punct de vedere stiintific ca ajuta la reducerea depunerilor de placa bacteriana si tartru.
+    
+    Waltham™
+    Dezvoltat alaturi de expertii in nutritie si medicina veterinara de la Institutul Waltham pentru nutritia animalelor de companie.
+    `,
+    specifications: [
+    
+        {key: "tip", value: "uscata"},
+        {key: "tip ambalaj", value: "sac"},
+        {key: "aroma", value: "vita pasare"},
+        {key: "dieta speciala", value: "fara coloranti"},
+        {key: "beneficii", value: "sistemul digestiv, ingrijire piele si blana"},
+        {key: "greutate", value: "15kg"},
+        {key: "numar pachete", value: 1},
+    ]
   },
   {
     name: "Hrana uscata pentru caini Brit Premium, Adult L",
     price: 128.14,
-    image:
+    image:[
       "https://s13emagst.akamaized.net/products/16021/16020833/images/res_e1f3b9940c28b5df48ce58aae74ad659.jpg?width=450&height=450&hash=5B8FEF5BF5E96902AC6AB4B31FB9D2BE",
+      "https://s13emagst.akamaized.net/products/16021/16020853/images/res_bd784fc54ae28cb76715463b5a794b42.jpg?width=450&height=450&hash=88AE57DB6DD2D1684C8C491DE2201680",
+      "https://s13emagst.akamaized.net/products/16021/16020835/images/res_2f7989b75d617bde924a12c9d8af70d6.jpg?width=80&height=80&hash=A917EEA1D790AD22BDE2D49BB1661263",
+      "https://s13emagst.akamaized.net/products/16021/16020839/images/res_a0944a2483018351590586b7543cb8bb.jpg?width=450&height=450&hash=ADB3090BF15AE56A4E65A6CA57D33B8F",
+    ],
     category: "Caini",
     subcategory: "mancare uscata",
-    id: 2
+    id: 2,
+    description:``,
+    specifications: [
+    
+        {key: "tip", value: "uscata"},
+        {key: "tip ambalaj", value: "sac"},
+        {key: "aroma", value: "vita pasare"},
+        {key: "dieta speciala", value: "fara coloranti"},
+        {key: "beneficii", value: "sistemul digestiv, ingrijire piele si blana"},
+        {key: "greutate", value: "15kg"},
+        {key: "numar pachete", value: 1},
+    ]
   },
   {
     name: "Hrana uscata pentru caini Friskies Junior, Pui & Legume",
     price: 112.99,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/740/739877/images/res_7ff079173ba64c9c7a12b344c96624ab.jpg?width=450&height=450&hash=50C1A9520E7CE7D5648A22D4B57E1B75",
+      "https://s13emagst.akamaized.net/products/416/415081/images/res_069c77bd7788980d6992861cd98b5979.jpg?width=450&height=450&hash=A249FC87BF7468B6C9DBB6F3005B42DF",
+      "https://s13emagst.akamaized.net/products/416/415081/images/res_afdf79b60ea3e37bfbf8f0ca883c6c2a.jpg?width=450&height=450&hash=AE84247718E7D2BD6EE788952740DE52",
+    ],
     category: "Caini",
     subcategory: "mancare uscata",
-    id: 3
+    id: 3,
+    description:`Hrana uscata pentru caini, Friskies Junior, Pui & Legume, 15Kg
+    Sistemul ultipro enhanced protein ajuta catelul sa absoarba cantitatea optima de calorii din proteine pentru a dezvolta si a mentine masa corporala supla fara surplus de tesut gras. Cu friskies junior primii pasi ai catelusului tau sunt unii sanatosi.
+    
+    Compozitie: cereale (4% porumb), carne si derivate de origine animala (4% pui), extracte de proteine vegetale, uleiuri si grasimi, derivate de origine vegetala, diverse zaharuri, minerale, legume (0,5%)
+    Aditivi (per kg): aditivi nutritionali: fier 160 mg, iod 1,8 mg, cupru 13 mg, mangan 48 mg, zinc 160 mg, seleniu 0,14 mg, vitamina b 175 ui, vitamina a 32240 ui, vitamina d3 990 ui, vitamina e 130 ui. Contine coloranti, antioxidanti si conservanti.
+    
+    Constituenti analitici: proteina bruta 28%, uleiuri si grasimi brute 11,5%, cenusa bruta 7%, fibra neprelucrata 2%.
+    A se pastra la loc uscat si racoros.
+    
+    Recomandat pentru:
+    - Talie: toate taliile.
+    - Rase: toate rasele.`,
+    specifications: [
+    
+        {key: "tip", value: "uscata"},
+        {key: "tip ambalaj", value: "sac"},
+        {key: "aroma", value: "vita, pasare"},
+        {key: "dieta speciala", value: "Bogata in proteine"},
+        {key: "beneficii", value: "sistemul digestiv, ingrijire piele si blana, Stimularea cresterii"},
+        {key: "greutate", value: "15kg"},
+        {key: "numar pachete", value: 1},
+    ]
   },
   {
     name: "Hrana uscata pentru caini Taste of the Wild Pacific Stream",
     price: 247.99,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/29203/29202302/images/res_7a70c0883704aad9ea6f246849c537d4.jpg?width=450&height=450&hash=A7FA911B16117BFBFB9719A7301C69A7",
+      "https://s13emagst.akamaized.net/products/29203/29202301/images/res_b354d96fe7910c0559fbdbde7906d890.jpg?width=450&height=450&hash=5F1D7C0CEF65989D738ABB0195296264",
+      "https://s13emagst.akamaized.net/products/29203/29202306/images/res_2f41f3e587a6a73921b037302d7ccb98.jpg?width=450&height=450&hash=C167BA8287C8E44B9EBA871160886080",
+      "https://s13emagst.akamaized.net/products/29203/29202307/images/res_cba5ce25936858b0fce7760b35d7fd70.jpg?width=450&height=450&hash=F2AD2618386F0D11BD6BC39CAD9D53DD",
+    ],
     category: "Caini",
     subcategory: "mancare uscata",
-    id: 4
+    id: 4,
+    description:`Taste of the Wild - Pacific Stream Canine este o mancare produsa in SUA din somon proaspat si afumat. Cartofii dulci sunt o sursa foarte usor de asimilat de energie, iar fructele si legumele incluse ii furnizeaza cainelui vitamine si minerale esentiale. Pestele este singura sursa de proteine animale din mancarea Pacific Stream Canine. Taste of the Wild nu contine cereale si corespunde cerintelor nutritionale naturale ale cainilor si totodata ia in considerare schimbarile ce se petrec in stilul de viata al unui caine cu un nivel de activitate redus.
+
+ 
+
+    Taste of the Wild - Pacific Stream este ideala pentru caini de orice varsta sau rasa si este o mancare conform dietei naturale a acestora.
+     
+    
+    De ce e hrana Taste of the Wild deosebita:
+    
+    All Life-Stages Nutrition - Taste of the Wild corespunde profilului nutritional al AAFCO (Association of American Feed Control Officials) pentru caini de orice varsta.
+    Somon proaspat si afumat - ingredientele de calitate inalta furnizeaza proteine usor de digerat si acizi grasi esentiali pentru sanatate optima.
+    Fara cereale - reteta fara cereala ii ofera cainelui dumneavoastra o hrana completa pentru sanatatea optima si vitalitate. Multi veterinari considera cerealele din mancare ca fiind o cauza pentru probleme de sanatate, nivelul ridicat de carbohidrati din cereale poate duce la obezitate, diabet, probleme digestive si alte afectiuni.
+    Amestec echilibrat de proteine pentru un profil optim de aminoacizi - aminoacizii sunt componentele de baza pentru un organism sanatos. Pestele marin are un continut bogat de acizi grasi Omega-3 (DHA, EPA) care contribuie la sanatatea pielii si stralucirea blanii.
+    Sistemul digestiv - radacina uscata de cicoare si extractul de Yucca Schidigera mentin echilibru florei intestinale, sprijina si intaresc sistemul imunitar
+    Antioxidanti naturali - fructele si legumele proaspete furnizeaza antioxidanti si au un continut ridicat de zinc, vitamina E si seleniu
+    Acizi grasi Omega - acizii grasi Omega-6 si Omega-3 ajuta la mentinerea sanatatii pielii si frumusetii blanii
+    Cartofii dulci - exoticii cartofi dulci sunt hranitori si deliciosi, sunt usor de digerat si furnizeaza energie plus vitamine B, vitamina C precum si minerale
+    Afine si zmeura - sunt bogate in fitonutrienti cu rol antioxidant si citoprotector
+    Rosii - rosiile furnizeaza fibre vegetale pentru o digestie sanatoasa si contin vitamine benefice, precum si antioxidanti puternici ca beta-carotenul si licopenul
+    Minerale chelate - minerale si oligoelemente in forma naturala organica
+    Produsa in SUA
+    `,
+    specifications: [
+    
+        {key: "tip", value: "uscata"},
+        {key: "tip ambalaj", value: "sac"},
+        {key: "aroma", value: "somon"},
+        {key: "dieta speciala", value: "Fara cereale, bogata in proteine"},
+        {key: "beneficii", value: "Sistemul digestiv, ingrijire piele si blana"},
+        {key: "greutate", value: "12kg"},
+        {key: "numar pachete", value: 1},
+    ]
   },
   {
     name: "Hrana umeda pentru caini Pedigree Vital Protection",
     price: 50.99,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/31852/31851394/images/res_71cae68dac6e368de10ce033dd3a4f1c.jpg?width=450&height=450&hash=2F02FE4D0B6C91878BC513110CC5B8EF",
+      "https://s13emagst.akamaized.net/products/8778/8777125/images/res_2cd8d42d51b183b8a1e5e3651588600f.jpg?width=450&height=450&hash=C0F6D3BC27F5B131BFE161C3D6446B2A",
+      "https://s13emagst.akamaized.net/products/8778/8777125/images/res_9bebeb7a1eb426fb53fe1e455a5018d9.jpg?width=450&height=450&hash=356F0FB3AE4A614D067CCC123BDBCF26",
+      "https://s13emagst.akamaized.net/products/8778/8777125/images/res_56f2ec2be4994e194b8bcb81c3362333.jpg?width=450&height=450&hash=5DF8877B6CD233C57DE68818ABFF98EB",
+    ],
     category: "Caini",
     subcategory: "mancare umeda",
-    id: 5
+    id: 5,
+    description:`Compozitie: carne si derivate de origine animala (39%, inclusiv 4% pui), cereale, legume (inclusiv 0.8% mix de morcovi si mazare deshidratati, echivalentul a 4% mix de morcovi si mazare), extracte din proteina vegetala, minerale, derivate de origine vegetala (inclusiv 0.5% pulpa de sfecla uscata), uleiuri si grasimi (inclusiv 0.5% ulei de floarea soarelui).
+
+    Constituenti analitici (%): proteina: 7.5; continut de grasimi: 5.5; materie anorganica: 2.0; fibra bruta: 0.30; umiditate: 82.0; calciu: 0.40.
+    
+    Aditivi per kg: Aditivi nutritionali: Vitamina D₃: 250 UI, Vitamina E: 60.0 mg, Cupru (Sulfat de cupru (II) pentahidrat): 2.1 mg, Iod (Iodat de calciu, anhidru): 0.35 mg, Fier (Sulfat de fier (II), monohidrat): 4.5 mg, Mangan (Sulfat de mangan, monohidrat): 2.7 mg, Zinc (Sulfat de zinc, monohidrat): 25.9 mg.
+    
+    Va recomandam sa va hraniti animalul cu un amestec de hrana completa umeda si uscata PEDIGREE®.
+    
+    Permiteti o etapa de tranzitie, ajustati cantitatea si impartiti in mese in functie de nevoile animalului dumneavoastra de companie. Oferiti apa proaspata. Oferiti hrana la temperatura camerei, pastrati excesul de hrana la rece timp de maxim 2 zile.
+    
+    A se consuma de preferinta inainte de: vezi pe laterala. Numarul lotului, numarul de identificare al fabricii: vezi pachetul individual.
+    
+    `,
+    specifications: [
+    
+        {key: "tip", value: "umeda"},
+        {key: "tip ambalaj", value: "plic"},
+        {key: "aroma", value: "pui"},
+        {key: "dieta speciala", value: "Bogata in proteine"},
+        {key: "beneficii", value: "Sistemul osos si articulatii, ingrijire piele si blana"},
+        {key: "greutate", value: "4kg"},
+        {key: "numar pachete", value: 40},
+    ]
   },
   {
     name: "Hrana umeda pentru caini Brit Premium, Beef With Tripes",
     price: 31.19,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/23619/23618459/images/res_3ae088965a928f5369585149b3b7ddd2.jpg?width=450&height=450&hash=C1AD424CECD5A6D1BBB98E676AF9183C",
+      "https://s13emagst.akamaized.net/products/23619/23618214/images/res_eb698d0cdaa59d1eacba4223ac9b03ba.jpg?width=450&height=450&hash=ED9745E95909A1A66EE9A75E93909EF7",
+      "https://s13emagst.akamaized.net/products/23619/23618459/images/res_3ae088965a928f5369585149b3b7ddd2.jpg?width=450&height=450&hash=C1AD424CECD5A6D1BBB98E676AF9183C",
+    ],
     category: "Caini",
     subcategory: "mancare umeda",
-    id: 6
+    id: 6,
+    description:`Conserve delicioase cu pate din carne menite sa multumeasca toate categoriile de caini, de la cei mai tineri, pentru a adauga varietate gustoasa la dieta, la cei mai in varsta, ce des au au probleme in a mesteca hrana.
+    Acest pate delicat contine carne selectionata, ierburi, fructe si colagen suplimentar si este, de asemenea, imbogatita cu ulei de somon ca sursa de acizi grasi esentiali omega-3.
+    
+    Compozitie: carne de vita 36%, supa de carne de vita 35,5%, pui 22%, burta de vita 4%, colagen 1%, minerale 1%, ulei de somon 0,5%.
+    Energie metabolizabila: 1,065 kcal / kg.`,
+    specifications: [
+    
+        {key: "tip", value: "umeda"},
+        {key: "tip ambalaj", value: "Conserva"},
+        {key: "aroma", value: "vita"},
+        {key: "dieta speciala", value: "fara coloranti"},
+        {key: "greutate", value: "15kg"},
+        {key: "numar pachete", value: 6},
+    ]
   },
   {
     name: "Hrana umeda pentru caini Mara Dog, Vanat",
     price: 63.99,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/14186/14185138/images/res_7868e1c8aae5dc163d0727d192058fa0.jpg?width=450&height=450&hash=63E1F3A4E9A4F82B17C046DDB4413905",
+      "https://s13emagst.akamaized.net/products/484/483442/images/res_457852e3acb15f03d7b79dce119f3ddc.jpg?width=450&height=450&hash=7C48386EB9E255273E6F74BC3998FB3F",
+      "https://s13emagst.akamaized.net/products/14186/14185133/images/res_71c3c12901000ff4107e8c2ef8874600.jpg?width=450&height=450&hash=70418B752FEC227426752BEE36BE7A7F",
+    ],
     category: "Caini",
     subcategory: "mancare umeda",
-    id: 7
+    id: 7,
+    description:`Hrana umeda pentru caini. Asigura o crestere si o dezvoltare armonioasa a cainelui dumneavoastra. Contine ingrediente esentiale pentru o digestie buna precum si nivele de calciu si proteine adaptate nevoilor de crestere a cainilor.
+
+    Ingrediente:
+    
+    Carne si derivate de origine animala (din care carne min. 5%, vanat min. 14%), Cereale, Extract de proteine vegetale, Minerale, Diverse zaharuri.
+    
+    Vitamine:
+    
+    Vitamina A: 1310 UI/kg, Vitamina D3: 160 UI/kg, Vitamina E ( tocoferol ): 10mg/kg.
+    
+    Analiza Tipica:
+    
+    Proteina bruta 8,0%, Grasime bruta 4,0%, Fibra bruta 0,5%, Umiditate 60,0%.`,
+    specifications: [
+    
+        {key: "tip", value: "Umeda"},
+        {key: "tip ambalaj", value: "Conserva"},
+        {key: "aroma", value: "Vanat"},
+        {key: "dieta speciala", value: "fara coloranti"},
+        {key: "beneficii", value: "sistemul digestiv, ingrijire piele si blana"},
+        {key: "greutate", value: "15kg"},
+        {key: "numar pachete", value: 12},
+    ]
   },
   {
     name: "Hrana umeda pentru caini Taste of the Wild Southwest Canyon",
     price: 109.99,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/14339/14338437/images/res_12ae8ec4293179ea83d76a9a11939991.jpg?width=450&height=450&hash=1EC711D4CD09343CD7E25C7E66C0906F",
+      "https://s13emagst.akamaized.net/products/14339/14338435/images/res_f74fe41d04898b99f4fa723b5c5248a8.jpg?width=450&height=450&hash=CD81A1CEEA55E488BC51E4EE0E999760",
+      "https://s13emagst.akamaized.net/products/14339/14338438/images/res_83d45c8d4c65cde1f985d713120fdadd.jpg?width=450&height=450&hash=915691950F575F37D0827DA8DB94A053",
+    ],
     category: "Caini",
     subcategory: "mancare umeda",
-    id: 8
+    id: 8,
+    description:`Taste of the Wild Southwest Canyon este o hrana umeda fara cereale, o formula nutritiva delicioasa cu carne de vita pentru toti cainii, indiferent de talie, rasa sau varsta.
+
+    Cainii predispusi alergiilor pot si ei sa consume Taste of the Wild Southwest Canyon. Bucatelele de carne sunt pe gustul si celor mai mofturosi dintre caini. In plus, fructele si legume continute sunt bogate in vitamine si antioxidanti naturali ceea ce reprezinta un plus pentru sanatatea cainelui, intarindu-i sistemul imunitar, sustinandu-o sanatatea florei intestinale si a sistemului digestiv.
+    
+    Ingrediente: vita 39%, mazare, cartofi, minerale, ulei de floarea soarelui, ulei de in, inulina, rosii uscate, cartofi rosii uscati, coacaze uscate, zmeura uscata.
+    
+    Vitamine si minerale: vitamina A 3000 IU/Kg., vitamina D3 420 IU/Kg., vitamina E 40 mg/Kg., complex vitamina B2 6,3 mg/Kg., monohidrat sulfat de zinc 107,14 mg/Kg., Sulfat de mangan 11,72 mg/Kg., iodat de calciu 0,6 mg/Kg.
+    
+    Constituenti analitici: proteina cruda 9,0%, grasime bruta 3,0 %, fibre brute 0,5%,  cenusa bruta 2,5%, umiditate 80,0%.`,
+    specifications: [
+    
+        {key: "tip", value: "umeda"},
+        {key: "tip ambalaj", value: "conserva"},
+        {key: "aroma", value: "vita"},
+        {key: "dieta speciala", value: "fara coloranti"},
+        {key: "beneficii", value: "sistemul digestiv, ingrijire piele si blana"},
+        {key: "greutate", value: "5kg"},
+        {key: "numar pachete", value: 12},
+    ]
   },
   {
     name: "Sampon TopCare pentru caini si pisici cu Clorhexidina",
     price: 25.99,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/14301/14300734/images/res_d3c513820aed8d9fa98974ebe905e015.jpg?width=450&height=450&hash=4138C36A9710583F4045B1DB8A1A29E6",
+      "https://s13emagst.akamaized.net/products/8012/8011170/images/res_dcc0a58def6a5005e9ba57d8331914c2.jpg?width=450&height=450&hash=EA5B1203CB59EFBF5B605C3335678DE9",
+      "https://s13emagst.akamaized.net/products/8012/8011173/images/res_948574bd302beb2c1c04287e1117c014.jpg?width=450&height=450&hash=43EA35FD65B7554729F99FB94751423D",
+    ],
     category: ["Pisici", "Caini"],
     subcategory: "igiena si ingrijire",
-    id: 9
+    id: 9,
+    description:`Sampon cu Clorhexidina
+
+    Sampon dedicat pentru piele si blana cu tendinta de inflamatii bacteriene si fungice. Clorhexidina concentratie actioneaza antibacterian si antifungic. Uleiul din frunze de arbore de ceai sprijina actiunea clorhexidinei si de asemenea actioneaza antiviral.
+    
+    Utilizare: Umeziti bine blana. Aplicati sampon pe tot corpul si lasati 5-10 minute ca timp de contact. Clatiti bine; repetati daca este necesar.
+    
+    Ingrediente: Apa, Sodium Laureth Sulfate, PEG-40 Hydrogenated Castor Oil, Cocamidopropyl Betaine, Cocamide DEA, Polyquatemium-7, Chlorhexidine Digluconate, Melaleuca Alternifolia Leaf Oil, Panthenol, Tetrasodium EDTA, Citric Acid, Sodium Benzoate, Potassium Sorbate.
+    
+    A se pastra intr-un loc uscat si umbrit la o temperatura care nu depaseste 25 °C.
+    Nu supraincalziti si nu inghetati.`,
+    specifications: [
+    
+        {key: "Tip produs", value: "sampon"},
+        {key: "Proprietati", value: "Antibacterian"},
+        {key: "Cantitate", value: "250 ml"},
+        {key: "Tip blana", value: "universal"},
+    ]
   },
   {
     name: "Sampon pentru caini si pisici Hartz Blana Alba",
     price: 33.06,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/4858/4857712/images/res_7dc38e90775afdbe50678584a020bef7.jpg?width=450&height=450&hash=D1FC717BE09DC4A2DCF74928674726C4",
+      "https://s13emagst.akamaized.net/products/8879/8878903/images/res_41fa095502a2c75b3e7053d00ce1d152.jpg?width=450&height=450&hash=6E552346600055AA9246D64A4B3227A5",
+      "https://s13emagst.akamaized.net/products/30618/30617086/images/res_bd9a7835ad2606f0169cc3da77adfcb2.jpg?width=450&height=450&hash=01C899A83228857094744EA7111F5E68",
+    ],
     category: ["Pisici", "Caini"],
     subcategory: "igiena si ingrijire",
-    id: 10
+    id: 10,
+    description:`Sampon special pentru caini cu blana deschisa sau alba. Contine extract de lamaie si musetel care curata foarte bine blana deschisa. Datorita proteinelor din lana de casmir, produsul hidrateaza foarte bine blana si impiedica electrizarea firelor de par. Substantele usoare nu irita pielea cainilor, dar spalati si umeziti foarte bine.
+
+    Produsul nu contine parfumuri artificiale, aroma de citrice venind din uleiurile esentiale. Nu contine sare! Nu irita pielea delicata a catelului.
+    
+    Utilizare: Udati blana catelului cu apa calda. Aplicati o cantitate mica de sampon cu grija pe tot corpul, evitand contactul cu ochii. Clatiti bine; repetati daca este nevoie. Dupa spalare periati parul, stergeti sau uscati cu feonul. Nu expuneti catelul la curenti de aer.
+    
+    Ingrediente: apa, sulfat de sodiu lauret, cocamidopropyl betaina, glucozida de cocos, gliceril oleat, PEG-7 cocoat gliceril, polyquaternium-7, extract de citrice, styren/acrilat copolymer, keratina hydrolizata, benzoat de sodiu, sorbat de potasiu, tetrasodium EDTA, acid citric, parfum, Cl 42090.`,
+    specifications: [
+    
+        {key: "Tip produs", value: "sampon"},
+        {key: "Proprietati", value: "Antibacterian"},
+        {key: "Cantitate", value: "250 ml"},
+        {key: "Tip blana", value: "Alba"},
+    ]
   },
   {
     name: "Sampon pentru caini si pisici cu blana neagra sau culoare inchisa",
     price: 21.99,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/8012/8011171/images/res_89e878f9bc16bf146529f30e091851bd.jpg?width=450&height=450&hash=F9B04BF2EA4504B78838A84CED7C6361",
+      "https://s13emagst.akamaized.net/products/8012/8011171/images/res_89e878f9bc16bf146529f30e091851bd.jpg?width=450&height=450&hash=F9B04BF2EA4504B78838A84CED7C6361",
+      "https://s13emagst.akamaized.net/products/38272/38271379/images/res_f13c0f79caa1dcc078c99d37546d16d9.jpg?width=450&height=450&hash=61E9DBDA721148BE0E5A71055E5F6211",
+    ],
     category: ["Pisici", "Caini"],
     subcategory: "igiena si ingrijire",
-    id: 11
+    id: 11,
+    description:`Sampon pentru caini sau pisici cu blana neagra sau culoare inchisa, TopCare250 ml
+
+ 
+
+    Sampon care intensifica culoarea blanii cu extract de henna si coaja de nuc, special pentru caini cu blana neagra sau inchisa la culoare. Datorita proteinelor din lana de casmir, samponul hraneste si previne electrificarea firelor de par. Substantele usoare nu irita pielea cainilor, dar spalati si umeziti foarte bine. Produsul nu contine parfumuri artificiale - aroma de citrice provine din uleiurile esentiale. NU contine sare! (nu irita pielea sensibila a cainilor).
+    
+    Utilizare: Udati blana catelului cu apa calda. Aplicati o cantitate mica de sampon cu grija pe tot corpul, evitand contactul cu ochii. Clatiti bine; repetati daca este necesar.
+    
+    Ingrediente: apa, sulfat de sodiu laureth, cocamidopropyl betaina, glucozida de cocos, gliceril oleat, PEG-7 gliceril cocoate, polyquaternium-7, extract de frunze de henna, extract de coaja de nuc, benzoat de sodiu, sorbat de potasiu, acid citric, tetrasodium EDTA, parfum, CI 77268:1.
+    
+    `,
+    specifications: [
+    
+        {key: "Tip produs", value: "sampon"},
+        {key: "Proprietati", value: "Antibacterian"},
+        {key: "Cantitate", value: "250 ml"},
+        {key: "Tip blana", value: "Neagra"},
+    ]
   },
   {
     name: "Sampon Antiseptic Caini si Pisici VetExpert Specialist",
     price: 69.02,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/22581/22580673/images/res_10c3985b7a94523a6c4e67e8e86b79fb.jpg?width=450&height=450&hash=C644DB723E018CDF72F8FE392EF9351C",
+      "https://s13emagst.akamaized.net/products/31696/31695309/images/res_463cca85d60a87d03d1d0be785e7a5bf.jpg?width=450&height=450&hash=AB1767B9C9D02270BD54DDFC5AB07163",
+      "https://s13emagst.akamaized.net/products/31668/31667233/images/res_ecc8b5d597b322f663202546aba68164.jpg?width=450&height=450&hash=3AE0A68347A80BDA9BFBFCFA31E8F2DE",
+    ],
     category: ["Pisici", "Caini"],
     subcategory: "igiena si ingrijire",
-    id: 12
+    id: 12,
+    description:`Sampon Antiseptic Caini si Pisici VetExpert Specialist, 250 ml
+    Produs dermatocosmetic destinat ingrijirii cainilor si pisicilor cu pielea sensibila, predispusi la a dezvolta dermatite (superficiale sau profunde) de origine bacteriana sau fungica.
+    
+    Datorita proprietatilor sale antiseptice si de calmare, samponul poate fi folosit cu succes in tratamentul local al piodermitelor.
+    
+    Produsul este conceput special pentru utilizare frecventa.
+    
+    Datorita excipientilor cu rol de hidratant si dermoprotectiv, contribuie la refacerea stratului protector lipidic al pielii si la normalizarea Ph-ului.
+    
+    Mod de utilizare:
+    
+    Spre deosebire de sampoanele cosmetice clasice, cele dermatologice trebuie sa ramana in contact cu pielea si blana animalului o anumita perioada de timp, necesara ca substanta activa sa actioneze eficient. Prin urmare:
+    
+    Inainte de imbaiere periaza temeinic blana animalului de companie pentru a o descalci si a indeparta murdaria sau impuritatile acumulate.
+    Uda roba, cainelui sau a pisicii, cu apa calduta (temperatura apei sa fie putin mai joasa decat cea optima pentru tine)
+    Aplica samponul pe blana si maseaza profund pana obtii o spumare usoara.
+    Lasa produsul sa actioneze 5 – 10 minute, timp in care masezi usor in continuare pielea.
+    La final, clateste cu apa din abundenta, pana la indepartarea completa a samponului
+    In principiu, se recomanda folosirea samponului de 2-3 ori pe saptamana, timp de 3 – 4 saptamani.
+    
+    In continuare frecventa spalarii se reduce la o data pe saptamana pana la disparitia completa a leziunilor cutanate.
+    
+    Pentru mai multe indicatii si scheme de tratament adaptate afectiunii dermatologice a cainelui tau consulta medicul veterinar.
+    
+    Precautii: numai pentru uz extern. A se evite contactul cu ochii animalului
+    
+    Reactii adverse: Nu se cunosc reactii adverse
+    
+    Contraindicatii: nu sunt
+    
+    Prezentare: Flacon de 250 ml, din material plastic.
+    
+    Conditii de pastrare: A se evita expunerea produsului la temperaturi mai mari de 30°C. A nu se lasa la indemana copiilor.
+    
+    Termen de valabilitate: inscris pe ambalaj`,
+    specifications: [
+    
+        {key: "Tip produs", value: "sampon tratament"},
+        {key: "Proprietati", value: "Antibacterian, fara parabeni, hipoalergenic"},
+        {key: "Cantitate", value: "250 ml"},
+        {key: "Tip blana", value: "Universal"},
+    ]
   },
   {
     name: "Jucarie pentru caini Brown Dog, Castorul Sandel",
     price: 19.99,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/8576/8575671/images/res_3261e89d7d244e2b562767a1aff00518.jpg?width=450&height=450&hash=625BAB37CEF541615C7F42DF4AA4C751",
+      "https://s13emagst.akamaized.net/products/8576/8575671/images/res_000884c47d1db43901290e7f525e20e9.jpg?width=450&height=450&hash=E7E48BDB6D4FDCD85A2F92E1F13971BB",
+      "https://s13emagst.akamaized.net/products/8576/8575671/images/res_24a3d5b0666ad02518a3060fe40b3840.jpg?width=450&height=450&hash=340F712F943C60E8CB5991A0ECBB1846",
+    ],
     category: "Caini",
     subcategory: "jucarii",
-    id: 13
+    id: 13,
+    description:`Jucarie pentru caini Brown Dog, Castorul Sandel, 32cm
+ 
+    Este o jucarie extrem de durabila, fabricata din PE, acril si TPR de cea mai buna calitate. Cainele se poate juca in siguranta datorita materialului non-toxic TPR si sfoara.
+    
+    Nu este potrivita pentru copii!
+    
+    Material: PE+ acril + TPR.`,
+    specifications: [
+    
+        {key: "tip", value: "interactiva"},
+        {key: "Culoare", value: "Multicolor"},
+        {key: "Lungime", value: "32cm"},
+    ]
   },
   {
     name: "Jucarie Trixie Minge Denta Fun Aroma Menta",
     price: 8.93,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/20270/20269497/images/res_5bddd93c9702ddbd905b1e0527b3c200.jpg?width=450&height=450&hash=238E12CF6F6F6F074B5C754B8644BBCF",
+      "https://s13emagst.akamaized.net/products/20451/20450827/images/res_b0861beab97aebc4ead14a21b34529a5.jpg?width=450&height=450&hash=BFC1DACAC9496580276CC9DEBBE56165",
+      "https://s13emagst.akamaized.net/products/10665/10664240/images/res_c16413c519b0df084da5fa00d8564c3d.jpg?width=450&height=450&hash=25DB1BA05F5965288EEC7776BBC90729",
+    ],
     category: "Caini",
     subcategory: "jucarii",
-    id: 14
+    id: 14,
+    description:`Material: cauciuc natural
+    Cu aroma de menta.
+    
+    Dimensiune:7 cm`,
+    specifications: [
+    
+        {key: "tip", value: "Standard"},
+        {key: "Culoare", value: "Verde"},
+        {key: "material", value: "Cauciuc"},
+    ]
   },
   {
     name: "Jucarie Trixie os vinil",
     price: 8.21,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/20491/20490772/images/res_1858a527292518e19bac6aa0b16dff03.jpg?width=450&height=450&hash=71732B17F113AC246C316678D05B90A2",
+      "https://s13emagst.akamaized.net/products/20491/20490772/images/res_aa00d62d44f482178d5fe29913a2d5c7.jpg?width=450&height=450&hash=C5A38DA535E05F8ACCE5341E47CDC5D5",
+      "https://s13emagst.akamaized.net/products/36768/36767880/images/res_183b6b7ed0341e650e87e6bd71fa0e52.jpg?width=450&height=450&hash=1B8B61D3026BE6592040E7A19E73D7B7",
+    ],
     category: "Caini",
     subcategory: "jucarii",
-    id: 15
+    id: 15,
+    description:`Jucarie tip os din vinilin
+    Cu sunet
+    
+    Dimensiune:15 cm
+    
+    Diverse culori. Selectarea culorilor nu este posibila.`,
+    specifications: [
+    
+        {key: "tip", value: "Standard"},
+        {key: "Culoare", value: "Multicolor"},
+        {key: "material", value: "Vinil"},
+    ]
   },
   {
     name: "Jucarie Interactiva pentru caini, Cheerble Wickedbone",
     price: 359.99,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/36158/36157024/images/res_e7a841fe62fa87e995f78870fbf38af3.jpg?width=450&height=450&hash=07B895D1AE85DA7688AFCD98C75B725A",
+      "https://s13emagst.akamaized.net/products/36158/36157024/images/res_feca5788b95e2f35c2eb568bc0ef32b7.jpg?width=450&height=450&hash=0FA70501FA3B41234217D37A3A8B49E0",
+      "https://s13emagst.akamaized.net/products/36158/36157024/images/res_fc94a5399325be117b9f36a87c753f88.jpg?width=450&height=450&hash=1296600032EEBB9770349B7C1574F079",
+    ],
     category: "Caini",
     subcategory: "jucarii",
-    id: 16
+    id: 16,
+    description:`Prima jucarie inteligenta si interactiva pentru caini din lume!
+
+    Cainii adora oasele, dar oasele conventionale sunt supraevaluate. Dispar rapid in gura cainelui si adesea provoaca probleme gastrice si o mare mizerie, fara a oferi nicio interactiune sau oportunitati de joc. Va prezentam Wickedbone, un dispozitiv de jocuri interactive in forma de os care functioneaza ca un insotitor cu adevarat inteligent si distractiv al cainelui tau.
+    
+    Acest dispozitiv va permite sa il operati de pe telefon si sa va jucati impreuna cu animalul de companie atat in interior, cat si in exterior.
+    
+    Wickedbone are doua moduri pentru momente si experiente diferite:
+    
+    Mod Drive: controlati-l prin aplicatia Wickedbone si mutati-l cu un joystick virtual. Alegeti dintre cele 9 miscari disponibile ale lui Wickedbone si veti descoperi si crea in curand noi combinatii de actiune pe masura ce va jucati cu cainele.
+    Mod interactiv: programat pentru a atrage atentia cainelui, nu necesita operare manuala, Wickedbone actioneaza in mod receptiv la diferite tipuri de atingeri, intotdeauna intr-un mod jucaus pentru a capta interesul cainele tau.
+    Durata lunga de viata a bateriei!
+    
+    Incarcarea Wickedbone este, de asemenea, foarte usoara, cu cablul sau de incarcare Micro USB. Incarcat o data timp de 1 ora, Wickedbone dureaza peste 40 de minute in modul drive si peste 4 ore in modul interactiv.
+    
+    Sigur, moale si puternic!
+    
+    Wickedbone a fost conceput pentru a fi sigur moale si puternic asa cum cainele dumneavoastra are nevoie sa fie. Fabricat din policarbonat si poliuretan, se simte suficient de moale atunci cand animalul dumneavoastra il prinde cu gura sau cand il atinge cu labutele.
+    
+    Materialele sunt certificate, sigure atat pentru oameni cat si pentru animalele de companie. In acelasi timp, sunt suficient  de puternice pentru a rezista uzurii, ceea ce inseamna ca puteti conta pe Wickedbone pentru a fi acolo pentru dumneavoastra si animalul dumneavoastra de companie pentru o lunga perioada de timp.`,
+    specifications: [
+    
+        {key: "tip", value: "Interactiva"},
+        {key: "Culoare", value: "Alb"},
+        {key: "material", value: "Poliuretan"}, 
+        {key: "tip control", value: "Wireless"},
+    ]
   },
   {
     name: "Husa protectie pentru bancheta autoturismului Brown Dog",
     price: 29.99,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/2813/2812581/images/res_5acb695d32d74e78e56d9dc25076a405.jpg?width=450&height=450&hash=04A1E84CE6047D19CB071219DFAEB701",
+      "https://s13emagst.akamaized.net/products/2813/2812581/images/res_89991e22ee6360839141ceebafe4efcd.jpg?width=450&height=450&hash=E98AD3762CB08D0C5548105DF6AF6D66",
+      "https://s13emagst.akamaized.net/products/2813/2812581/images/res_27bebf769fc60679dca23865b1f4f36c.jpg?width=450&height=450&hash=D1BB4B270F13A323A966BD00B2CBB732",
+      "https://s13emagst.akamaized.net/products/2813/2812581/images/res_c28b0cc11d843966f8d01217248321d6.jpg?width=450&height=450&hash=A219EDDDDCD812D1116C0548C0B52B7D",
+    ],
     category: "Caini",
     subcategory: "articole de transport",
-    id: 17
+    id: 17,
+    description:`Husa protectie pentru bancheta autoturismului Brown Dog, 143x148 cm, Negru
+
+    Husa pentru bancheta din spate a autoturismului este usor de atasat, iar stratul de PVC cu care este impregnata pe verso protejeaza impotriva umezelii, murdariei si a parului de caine.
+    
+    Husa are sisteme de fixare in jurul tetierelor, fermoar si locasuri de trecere care permit prinderea centurilor de siguranta.
+    
+    Contine instructiuni de montare.`,
+    specifications: [
+    
+        {key: "tip produs", value: "Husa protectie"},
+        {key: "Tip deschidere", value: "Superioara"},
+        {key: "Material", value: "PVC"},
+        {key: "Culoare", value: "Negru"},
+        {key: "Caracteristici cheie", value: "Agatatoar, cusaturi sigilate"},
+        {key: "Continut pachet", value: "1 x Husa protectie"},
+    ]
   },
   {
     name: "Cusca transport animale IMAC Carry Sport",
     price: 55.51,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/497/496132/images/res_88eaba93541566ba856252e1e8d572c4.jpg?width=450&height=450&hash=9EC6FECACC4F446D9986B4DE620AC4E4",
+      "https://s13emagst.akamaized.net/products/497/496128/images/res_b7781208849d0a92beeb4018dea1d4fa.jpg?width=450&height=450&hash=8D9FF3EC658F1ED554ECF7E9EF5F5470",
+    ],
     category: "Caini",
     subcategory: "articole de transport",
-    id: 18
+    id: 18,
+    description:`Cusca Imac Linus Cabrio este potrivita pentru transportul pisicilor si cainilor de talie mica.
+
+    Dimensiuni: 50 x 32 x 34 cm`,
+    specifications: [
+        {key: "tip produs", value: "Cusca"},
+        {key: "Tip deschidere", value: "Frontala"},
+        {key: "Material", value: "PVC"},
+        {key: "Culoare", value: "albastru"},
+    ]
   },
   {
-    name: "Rucsac pentru transport animale de talie mica, transparent, Rosu",
+    name: "Rucsac pentru transport animale de talie mica, transparent",
     price: 139,
-    image:
+    image: [
       "https://s13emagst.akamaized.net/products/30584/30583352/images/res_c17e3fcaf86e94389aaaefef4c008439.jpg?width=450&height=450&hash=12C7BAA6A3FE5D1A1C0FC03888B73307",
+      "https://s13emagst.akamaized.net/products/30610/30609915/images/res_d0884d50d3d7434ed24c2b514bb62b4e.jpg?width=450&height=450&hash=2B9B03628E35F73AFB04D2D23A2A9FC5",
+      "https://s13emagst.akamaized.net/products/30687/30686110/images/res_02a95dd2099aee55c70daa57a599d083.jpg?width=450&height=450&hash=EA3D5E5FBC6E5D9D63FB0F96A69E9231",
+    ],
     category: "Caini",
     subcategory: "articole de transport",
-    id: 19
+    id: 19,
+    description:`Rucsacul de transport este diferit fata de alte produse asemanatoare datorita peretelui panoramic de care acesta dispune. Aceasta caracteristica reduce anxiozitatea animalutului tau, si il ajuta sa se bucure de plimbare. Rusac transport animale de companie, tip panoramic este fabricat din PVC si panza Oxford. Acesta este impermeabil, astfel ca animalutul tau este ferit de picaturile de ploaie pe care le poate intampina pe traseu. Rucsacul este potrivit pentru a transporta pisici sau catei de talie mica si medie, cu o greutate de pana la 6 kilograme. Designul unic al rucsacului nu va lasa indiferente persoanele din jur, toti vor putea sa admire animalutul. Rucsacul este perfect pentru calatorii, cumparaturi, plimbari in parc, etc. Design-ul transparent ii permite animalului de companie sa vada lumina soarelui si peisajele din exterior. Mecanismul de inchidere al rucsacului este prevazut sa impiedice deschiderea rucsacului pentru ca animalutul tau sa nu poata sa sara din rucsac in timpul mersului. Fermoarul este usor de manevrabil, rezistent, practic si sigur. Rucsacul te ajuta ca de acum sa iti poti surprinde  animalul de companie luandu-l cu tine in toate calatoriile tale! Culoare: Gri deschis`,
+    specifications: [
+    
+        {key: "Pentru", value: "Animale mici, caini, pisici"},
+        {key: "Talie", value: "Mica"},
+        {key: "Tip produs", value: "Rucsac"},
+        {key: "Tip deschidere", value: "Laterala, frontala"},
+        {key: "Material", value: "Impermeabil, PVC"},
+        {key: "Caracteristici cheie", value: "Impermeabil, pernuta detasabila, aprobat zbor aerian, aerisire, buzunar"},
+        {key: "Greutate maxima suportata", value: "6kg"},
+    ]
   },
   {
     name: "Suport din aluminiu PawHut pentru caine cu perete si inchidere mobila",

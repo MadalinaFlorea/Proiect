@@ -114,12 +114,12 @@ const productPage = {
   renderProduct: (product) => {
     let viewDetailsButton = document.createElement("a");
     viewDetailsButton.innerHTML = "Vizualizeaza produs";
-    //@toDo link button to product
+    viewDetailsButton.addEventListener("click", () => window.location.href = `product-page.html?id=${product.id}`);
     let productWrapper = document.createElement("div");
     productWrapper.appendChild(viewDetailsButton);
     productWrapper.classList.add("product");
     let productImage = document.createElement("img");
-    productImage.setAttribute("src", product.image);
+    productImage.setAttribute("src", typeof product.image !=="string" ? product.image[0] : product.image);
     let productTitle = document.createElement("p");
     productTitle.innerHTML = product.name;
     let productPrice = document.createElement("span");

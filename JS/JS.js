@@ -39,7 +39,7 @@ const productsList = [
         {key: "dieta speciala", value: "fara coloranti"},
         {key: "beneficii", value: "sistemul digestiv, ingrijire piele si blana"},
         {key: "greutate", value: "15kg"},
-        {key: "numar pachete", value: 1},
+        {key: "numar pachete", value: "1"},
     ]
   },
   {
@@ -54,7 +54,24 @@ const productsList = [
     category: "Caini",
     subcategory: "mancare uscata",
     id: 2,
-    description:``,
+    description:`Hrana uscata pentru caini, Brit Premium By Nature, Adult L, 15 Kg
+
+    Beneficii:
+    
+    - Sustine sanatatea  articulatiilor si mobilitatea organismului;
+    - O piele sanatoasa si o blana stralucitoare;
+    - Sustinerea imunitatii si a starii de sanatate.
+    
+    Hrana completa formula de pui pentru caini adulti de talie mare (25-45 kg).
+    
+    Compozitie: carne de pui 45 % (deshidratata 25 %, dezosat 20 %), ovaz, grau, grasime de pui (conservata cu tocoferoli), porumb, mere uscate, ulei de somon (2 %), ficat de pui hidrolizat, drojdie de bere, colagen, carapace de crustacee (sursa de glucozamina, 210 mg/kg), cartilagiu (o sursa de condroitina, 150 mg/kg), ierburi si de fructe (cuisoare, citrice, rozmarin, curcuma, 120 mg/kg), manan-oligozaharide (120 mg/kg), fructo-oligozaharide (90 mg/kg), Mojave yucca (90 mg/kg), musetelul uscat (80 mg/kg), midii verzi (o sursa de glicozaminoglican
+    (50 mg/kg), afine uscate (50 mg/kg).
+    
+    Ghid de hranire: Hrana se poate servi uscata sau inmuiata in putina apa calduta. Hrana se poate imparti in 1 -2 portii egale pe parcursul zilei. Cantitatile zilnice recomandate sunt prezentate in tabelul de alimentatie. Cand serviti Brit Premium pentru prima data, utilizati cantitati mai mici si amestecati cu hrana anterioara; mariti apoi treptat portia de Brit Premium. Asigurati in permanenta cainelui dumneavoastra apa proaspata de baut.
+    
+    Constituenti analitici: proteina bruta 27,0 %, continut de grasimi 14,0 %, umiditate 10,0 %, cenusa bruta 7,0 %, fibra bruta 2,0 %, calciu 1,5 %, fosfor 1,1 %, omega-3 0,2 %, omega-6 1,6 %.
+    
+    Aditivi nutritionali per kg: vitamina A (3a672a) 15.000 UI, vitamina D3 (E671) 1.000 UI, vitamina E (α-tocoferol) (3a700) 400 mg, biotina (3a880) 0,5 mg, clorura de colina (3a890) 500 mg, chelat de zinc al aminoacizilor hidrat (3b606) 70 mg, chelat feros al aminoacizilor, hidrat (E1) 60 mg, chelat de mangan al aminoacizilor, hidratat (E5) 30 mg, iodura de potasiu (3b201) 0,5 mg, chelat cupric al aminoacizilor, hidrat (E4) 12 mg, forma organica de seleniu produsa de catre Saccharomyces cerevisiae CNCM I-3060 (3b8.10) 0,2 mg. Contine antioxidanti aprobati de UE: extract de tocoferol din uleiuri vegetale (1b306), palmitat de ascorbil (1b304) & extract de rozmarin.`,
     specifications: [
     
         {key: "tip", value: "uscata"},
@@ -63,7 +80,7 @@ const productsList = [
         {key: "dieta speciala", value: "fara coloranti"},
         {key: "beneficii", value: "sistemul digestiv, ingrijire piele si blana"},
         {key: "greutate", value: "15kg"},
-        {key: "numar pachete", value: 1},
+        {key: "numar pachete", value: "1"},
     ]
   },
   {
@@ -97,7 +114,7 @@ const productsList = [
         {key: "dieta speciala", value: "Bogata in proteine"},
         {key: "beneficii", value: "sistemul digestiv, ingrijire piele si blana, Stimularea cresterii"},
         {key: "greutate", value: "15kg"},
-        {key: "numar pachete", value: 1},
+        {key: "numar pachete", value: "1"},
     ]
   },
   {
@@ -142,7 +159,7 @@ const productsList = [
         {key: "dieta speciala", value: "Fara cereale, bogata in proteine"},
         {key: "beneficii", value: "Sistemul digestiv, ingrijire piele si blana"},
         {key: "greutate", value: "12kg"},
-        {key: "numar pachete", value: 1},
+        {key: "numar pachete", value: "1"},
     ]
   },
   {
@@ -178,7 +195,7 @@ const productsList = [
         {key: "dieta speciala", value: "Bogata in proteine"},
         {key: "beneficii", value: "Sistemul osos si articulatii, ingrijire piele si blana"},
         {key: "greutate", value: "4kg"},
-        {key: "numar pachete", value: 40},
+        {key: "numar pachete", value: "40"},
     ]
   },
   {
@@ -204,7 +221,7 @@ const productsList = [
         {key: "aroma", value: "vita"},
         {key: "dieta speciala", value: "fara coloranti"},
         {key: "greutate", value: "15kg"},
-        {key: "numar pachete", value: 6},
+        {key: "numar pachete", value: "6"},
     ]
   },
   {
@@ -239,7 +256,7 @@ const productsList = [
         {key: "dieta speciala", value: "fara coloranti"},
         {key: "beneficii", value: "sistemul digestiv, ingrijire piele si blana"},
         {key: "greutate", value: "15kg"},
-        {key: "numar pachete", value: 12},
+        {key: "numar pachete", value: "12"},
     ]
   },
   {
@@ -270,7 +287,7 @@ const productsList = [
         {key: "dieta speciala", value: "fara coloranti"},
         {key: "beneficii", value: "sistemul digestiv, ingrijire piele si blana"},
         {key: "greutate", value: "5kg"},
-        {key: "numar pachete", value: 12},
+        {key: "numar pachete", value: "12"},
     ]
   },
   {

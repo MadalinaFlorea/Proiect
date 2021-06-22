@@ -51,10 +51,10 @@ if (product.specifications) {
     for (let specification of product.specifications) {
         tableRow = document.createElement("tr");
         tableColumn = document.createElement("td");
-        tableColumn.innerHTML = specification.key;
+        tableColumn.innerHTML = specification.key.charAt(0).toUpperCase() + specification.key.slice(1);
         tableRow.appendChild(tableColumn);
         tableColumn = document.createElement("td");
-        tableColumn.innerHTML = specification.value;
+        tableColumn.innerHTML = specification.value.charAt(0).toUpperCase() + specification.value.slice(1);
         tableRow.appendChild(tableColumn);
         table.appendChild(tableRow);
     }

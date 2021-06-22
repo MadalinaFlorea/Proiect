@@ -29,7 +29,6 @@ const buildCarousel = (products, carouselTitle, carouselSubtitle) => {
     productPrice.innerHTML = product.price + " Lei";
     productWrapper.appendChild(productPrice);
     let productButton = document.createElement("button");
-    //@toDo deharcodare
     productButton.innerHTML = "Vezi produs";
     productButton.addEventListener("click", () => window.location.href = `product-page.html?id=${product.id}`)
     productWrapper.appendChild(productButton);

@@ -20,8 +20,6 @@ body header {
 
 body header div {
   color: #f4faff;
-  margin-right: 20px;
-  justify-self: flex-end;
   cursor: pointer;
 }
 
@@ -38,19 +36,30 @@ body header .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-body header .container .subsection {
+body header .subsection.right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-body header .container .right {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+body header .subsection.right div {
+  margin: 0 10px;
 }
 
 body nav {
@@ -164,6 +173,12 @@ body .hero form input[type="submit"] {
   border: 1px solid #4F646F;
 }
 
+body .hero h1,
+body .hero h3,
+body .hero label {
+  text-align: center;
+}
+
 body section.carousel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,7 +244,6 @@ body section.carousel .product-slider .product {
           align-items: center;
   border: 1px solid #DEE7E7;
   padding: 10px;
-  max-width: 20%;
   width: 20%;
 }
 
@@ -554,7 +568,7 @@ footer .container ul {
 }
 
 .search-bar input[type="text"] {
-  width: 40vh;
+  width: 40vw;
 }
 
 .search-bar input[type="submit"] {
@@ -895,5 +909,204 @@ footer .container ul {
   border-top: 2px solid #DEE7E7;
   padding: 15px 25px;
   text-decoration: none;
+}
+
+@media (max-width: 420px) {
+  body .hero form input[type="text"] {
+    width: auto;
+  }
+  body section.carousel .product-slider .product {
+    max-width: auto;
+    width: 40%;
+  }
+  body section.carousel .product-slider .product.active:nth-child(4), body section.carousel .product-slider .product.active:first-of-type {
+    display: none;
+  }
+  .container {
+    width: 95vw;
+  }
+  section.subscribe .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.subscribe .container h2 {
+    text-align: center;
+  }
+  section.subscribe .container form {
+    margin-bottom: 10px;
+  }
+  .modal {
+    padding-top: 0;
+  }
+  .modal-body {
+    width: 80vw;
+    height: 90vh;
+    top: 5vh;
+  }
+  .modal-body section {
+    width: 100%;
+    overflow: scroll;
+  }
+  .modal-body .left {
+    display: none;
+  }
+  .product-page.container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #filter {
+    width: auto;
+    height: auto;
+    position: initial;
+  }
+  #products_list {
+    width: auto;
+  }
+  #products_list .product {
+    width: 49%;
+  }
+  .product-container.container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .product-container.container #product-description {
+    width: auto;
+  }
+  .product-container.container #product-details {
+    width: auto;
+    position: relative;
+    top: 0;
+  }
+  .product-container.container img {
+    max-width: 80vw;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 800px) {
+  .container {
+    width: 90vw;
+  }
+  body .hero form input[type="text"] {
+    width: auto;
+  }
+  body section.carousel .product-slider .product {
+    max-width: auto;
+    width: 33%;
+  }
+  body section.carousel .product-slider .product.active:nth-child(4) {
+    display: none;
+  }
+  section.subscribe .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.subscribe .container h2 {
+    text-align: center;
+  }
+  section.subscribe .container form {
+    margin-bottom: 10px;
+  }
+  .modal {
+    padding-top: 0;
+  }
+  .modal-body {
+    width: 80vw;
+    height: 90vh;
+    top: 5vh;
+  }
+  .modal-body section {
+    width: 75%;
+    overflow: scroll;
+  }
+  .modal-body .left {
+    display: none;
+  }
+  .product-page.container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #filter {
+    width: auto;
+    height: auto;
+    position: initial;
+  }
+  #filter h4 {
+    text-align: center;
+  }
+  #filter > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #products_list {
+    width: auto;
+  }
+  #products_list .product {
+    width: 32%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .product-container.container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .product-container.container #product-description {
+    width: auto;
+  }
+  .product-container.container #product-details {
+    width: auto;
+    position: relative;
+    top: 0;
+  }
+  .product-container.container img {
+    max-width: 80vw;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+  .container {
+    width: 95vw;
+  }
+  .modal {
+    padding-top: 0;
+  }
+  .modal-body {
+    width: 60vw;
+    height: 70vh;
+    top: 15vh;
+  }
+  .modal-body section {
+    width: 100%;
+    overflow: scroll;
+  }
+  .modal-body .left {
+    display: none;
+  }
+  #filter {
+    padding: 0 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

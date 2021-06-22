@@ -872,7 +872,7 @@ const productsList = [
     id: 48
   },
   {
-    name: "Dispenser apa automat - CLD CareLoveDevotion",
+    name: "Dispenser apa automat - CLD",
     price: 326.06,
     image:
       "https://s13emagst.akamaized.net/products/31164/31163225/images/res_78921cb04f62d251991d0a54a4194096.jpg?width=450&height=450&hash=34747C0C65F2D61382DFF197423468E0",
